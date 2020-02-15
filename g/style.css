@@ -1,0 +1,29 @@
+* {
+  margin: 0;
+  padding :0;
+}
+
+.indent {
+  width: 100%;
+  height: 20px;
+}
+
+.read-important-document {
+  margin: 20px 16px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.read-important-document > .icon-and-text {
+  display: flex;
+  width: 700px;
+}
+
+.read-important-document > .icon-and-text > .icons {
+  width: 40px;
+}
+
+.read-important-document > .favourite {
+  margin-top: -4px
+}
