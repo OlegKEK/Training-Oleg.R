@@ -106,8 +106,29 @@
   margin-left: auto;
 }
 
+.your-mom {
+  width: 580px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 42px;
+  font-weight: 700;
+  letter-spacing: 0.66px;
+  color: #000000;
+  span {
+    color: #ffc501;
+  }
+}
+
+.refine {
+  @extend %font;
+  margin-top: 40px;
+  margin-bottom: 7px;
+}
+// Олег, тут не могу понять почему menu-wrapper становиться больше чем дивы внутри него 33 строка
+.menu-wrapper {
+  margin-bottom: 80px;
+}
+
 .menu {
-  height: 24px;
   @extend %font;
   padding: {
     top: 9px;
@@ -119,50 +140,30 @@
   background-color: #f7f7f7;
   border-radius: 4px;
   margin-right: 16px;
-  img {
-    position: relative;
-    bottom: 2px;
-  }
-}
-.menu-wrapper {
-  div:first-child {
-    color: #000000;
-    background-color: #ffc501;
-  }
-  div:last-child {
-    position: relative;
-    margin-right: 0;
-    padding-left: 21px;
-    padding-right: 28px;
-    width: 105px;
-    bottom: -10.5px;
-  }
-  margin-bottom: 80px;
 }
 
-.refine {
-  height: 24px;
-  @extend %font;
-  margin-top: 40px;
-  margin-bottom: 7px;
-}
-
-.your-mom {
-  width: 580px;
-  height: 104px;
-  font-family: "Montserrat", sans-serif;
-  font-size: 42px;
-  font-weight: 700;
-  letter-spacing: 0.66px;
+.menu:first-child{
   color: #000000;
-  span {
-    color: #ffc501;
-  }
+  background-color: #ffc501;
+}
+
+.menu:last-child{
+    margin-right: 0;
+    padding-right: 28px;
+    padding-left: 16px;
+}
+// В этом месте, что не делаю не могу опустить звезду, поднимается все к ней наоборот 38 строка
+.menu-favorits{
+  display: flex;
 }
 
 .favorits {
-  float: right;
-  padding-left: 4px;
+  margin-left: 8px;
+  margin-top: 10px;
+}
+
+.menu-star{
+
 }
 
 .choice {
@@ -226,6 +227,7 @@
   margin-left: 20px;
 }
 // Выделяю фирст и ласт чилд, все хорошо, пока я не кладу первый instance в div -- 84 строка html
+// через панель разараба сразу увидишь у первого видео отступ как у ластчайлда
 .instance-video:first-child {
   margin-left: 0;
 }
