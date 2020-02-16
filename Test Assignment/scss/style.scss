@@ -1,12 +1,13 @@
-body {
+* {
   margin: 0;
+  padding: 0;
 }
 %font {
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-size: 15px;
   line-height: 1.6;
   letter-spacing: 0.4px;
-  color: red;
+  color: #555555;
 }
 
 .top-panel {
@@ -16,15 +17,16 @@ body {
   height: 70px;
   margin-left: auto;
   margin-right: auto;
+  align-items: center;
 }
 .top-panel-left {
   display: flex;
-  padding-top: 26px;
+  width: 315px;
 }
 
 .daily-activities {
   height: 24px;
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.25px;
@@ -35,19 +37,18 @@ body {
 
 .bathing-showering {
   height: 32px;
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-size: 24px;
   font-weight: 600;
   line-height: 1.33;
   letter-spacing: 0.38px;
   text-align: center;
-  padding-top: 22px;
 }
 
 .top-panel-right {
   display: flex;
   justify-content: space-between;
-  padding-top: 24px;
+  width: 315px;
   img {
     width: 28px;
     height: 28px;
@@ -59,7 +60,7 @@ body {
 
 .search {
   height: 24px;
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.25px;
@@ -93,8 +94,10 @@ body {
 .hr-top {
   width: 1312px;
   height: 1px;
-  background-color: #dddddd;
+  background-color: red;
   margin-bottom: 80px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .container {
@@ -147,7 +150,7 @@ body {
 .your-mom {
   width: 580px;
   height: 104px;
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-size: 42px;
   font-weight: 700;
   letter-spacing: 0.66px;
@@ -165,8 +168,9 @@ body {
 .choice {
   display: flex;
   justify-content: space-between;
+  margin-bottom: 24px;
   :first-child {
-    font-family: 'Montserrat', sans-serif;
+    font-family: "Montserrat", sans-serif;
     font-size: 24px;
     font-weight: 600;
     line-height: 1.33;
@@ -175,9 +179,11 @@ body {
     margin: 0;
   }
   :last-child {
+    height: 24px;
     @extend %font;
     color: #000000;
-    margin: 0 24;
+    margin: 0;
+    margin-top: 8px;
     text-align: right;
     text-shadow: 0 4px 4px yellow;
   }
@@ -208,43 +214,52 @@ body {
   }
 }
 
-.video {
-  margin-top: 32px;
+.container-video {
   display: flex;
-  justify-content: space-between;
-  margin-bottom: 24px;
-  div {
-    width: 220px;
-    :first-child {
-      border-radius: 4px;
-    }
-    p {
-      margin: 0;
-      width: 220px;
-      @extend %font;
-    }
-  }
-}
-.time {
-  position: relative;
-  width: 36px;
-  height: 24px;
+  margin-top: 40px;
+  margin-bottom: 80px;
   @extend %font;
+}
+
+.instance-video {
+  width: 220px;
+  margin-left: 20px;
+}
+// Выделяю фирст и ласт чилд, все хорошо, пока я не кладу первый instance в div -- 84 строка html
+.instance-video:first-child {
+  margin-left: 0;
+}
+
+.instance-video:last-child {
+  margin-right: 10px;
+}
+
+.picture-video {
+  height: 138px;
+  margin-bottom: 25px;
+}
+
+.star-video {
+  text-align: right;
+  padding-top: 8px;
+  padding-right: 8px;
+}
+
+.time-video {
+  text-align: right;
+  padding-top: 64px;
+  padding-right: 8px;
   font-weight: 600;
   color: #ffffff;
-  bottom: 48px;
-  left: 150px;
 }
-.time.time-long {
-  left: 140px;
-}
-
-.video-star {
-  position: relative;
-  left: 185px;
-  bottom: 132px;
+// ВОт тут я не могу сделать так что бы рамка была 
+//за пределами контейнера с дивами instance, она сдвигается внуть а не наружу.
+.selected-video{
+  background-color: #f7f7f7;
+  padding: 8px;
 }
 
+// Пригодиться для селектед видео
 .active-video {
   div {
     position: relative;
@@ -263,114 +278,84 @@ body {
     }
   }
 }
-
-.audio {
-  display: flex;
-  justify-content: space-between;
-  margin-top: 22px;
-  margin-bottom: 20px;
-  div {
-    width: 250px;
-    display: flex;
-    justify-content: space-between;
-    margin-right: 16px;
-    margin-left: 24px;
-    p {
-      margin: 0;
-      @extend %font;
-    }
-    img {
-      position: relative;
-      bottom: 5px;
-    }
-  }
-}
-
-.title-audio {
-  position: relative;
-  left:16px
-}
+//
 
 .selected-audio {
-  display: flex;
-  justify-content: space-between;
   width: 950px;
-  height: 146px;
   background-color: #f7f7f7;
   margin-top: 0;
   margin-bottom: 80px;
-  p{
+}
+
+.container-audio {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 24px 16px;
+  p {
     @extend %font;
     margin: 0;
   }
-
 }
-.title-selected-audio{
-  width: 590px;
+.title-audio {
   display: flex;
   justify-content: space-between;
-  div{
-    width: 30px;
-    height: 30px;
-    background-color: #ffc501;
-    border-radius: 50%;
-    margin-left: 16px;
-    margin-top: 23px;
-    img{
-      position: relative;
-      top: 1px;
-    }
-  }
-  p{
-    margin-top: 25px;
-    margin-left: 16px;
+}
+.number-audio {
+  margin: 0 8px;
+}
+
+.text-title-audio {
+  width: 546px;
+  margin-left: 16px;
+}
+.play {
+  width: 30px;
+  height: 30px;
+  background-color: #ffc501;
+  border-radius: 50%;
+  img {
+    position: relative;
+    top: 1px;
+    left: 1px;
   }
 }
 
-.time-selected-audio{
+.time-audio {
   width: 250px;
   display: flex;
   justify-content: space-between;
-  margin-right: 16px;
-  margin-top: 25px;
-  img{
-    position: relative;
-    bottom: 48px;
-  }
 }
 
-.links{
+.links {
   margin-top: 24px;
   margin-bottom: 24px;
-  div{
+  div {
     display: flex;
     justify-content: space-between;
     margin-right: 16px;
     margin-bottom: 8px;
-    p{
+    p {
       width: 808px;
       margin: 0;
       @extend %font;
     }
-    img{
-      position: relative;
+    img {
+      margin-top: -4px;
       width: 28px;
       height: 28px;
-      bottom: 6px;
     }
   }
-  img{
+  img {
     display: inline-block;
     width: 16px;
     height: 16px;
   }
-  p{
-    position: relative;
+  p {
     display: inline-block;
     margin: 0;
-    bottom: 4px;
     margin-left: 4px;
-    font-family: 'Montserrat', sans-serif;
+    font-family: "Montserrat", sans-serif;
     font-size: 13px;
     line-height: 1.54;
     letter-spacing: 0.35px;
@@ -378,62 +363,46 @@ body {
   }
 }
 
-.documents{
+.read-important-document {
+  margin: 24px 16px;
   display: flex;
-  margin: 24px 16px 24px 16px;
-  div{
-    p{
-      width: 720px;
-      position: relative;
-      margin: 0;
-      left: 42px;
-      bottom: 33px;
-      @extend %font;
-    }
-  }
-  span{
-    display: block;
-    position: relative;
-    right: 706px;
-    top: 30px;
-    font-family: 'Montserrat', sans-serif;
-    font-size: 13px;
-    line-height: 1.54;
-    letter-spacing: 0.35px;
-    color: #999999;
-    margin-bottom: 24px;
-  }
-}
-#long-read{
-  top: 54px;
-}
-#short-read{
-   top: 80px;
-}
-.star-documents{
-  position: relative;
-  left: 168px;
-  bottom: 18px;
-}
-.star-documents.middle{
-  bottom: 30px;
-}
-.star-documents.long{
-  bottom: 42px;
+  align-items: flex-start;
+  justify-content: space-between;
 }
 
-.footer{
+.read-important-document > .icon-and-text {
+  display: flex;
+  width: 700px;
+}
+.read-important-document > .icon-and-text > .texts > .main-text {
+  margin-bottom: 8px;
+  @extend %font;
+}
+.read-important-document > .icon-and-text > .texts > .time-text {
+  font-family: "Montserrat", sans-serif;
+  font-size: 13px;
+  line-height: 1.54;
+  letter-spacing: 0.35px;
+  color: #999999;
+}
+
+.read-important-document > .icon-and-text > .icons {
+  margin-right: 16px;
+}
+
+.footer {
   width: 1312px;
   margin-right: auto;
   margin-left: auto;
   display: flex;
   justify-content: space-between;
   margin-top: 80px;
-  p{
-    font-family: 'Montserrat', sans-serif;
+  p {
+    font-family: "Montserrat", sans-serif;
     font-size: 12px;
     line-height: 2;
     letter-spacing: 0.32px;
     color: #999999;
   }
 }
+
