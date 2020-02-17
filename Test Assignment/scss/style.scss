@@ -94,7 +94,7 @@
 .hr-top {
   width: 1312px;
   height: 1px;
-  background-color: red;
+  background-color: #dddddd;
   margin-bottom: 80px;
   margin-left: auto;
   margin-right: auto;
@@ -123,12 +123,15 @@
   margin-top: 40px;
   margin-bottom: 7px;
 }
-// Олег, тут не могу понять почему menu-wrapper становиться больше чем дивы внутри него 33 строка
-.menu-wrapper {
-  margin-bottom: 80px;
-}
 
 .menu {
+  margin-bottom: 80px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.menu-items {
+  display: inline-block;
   @extend %font;
   padding: {
     top: 9px;
@@ -136,34 +139,27 @@
     left: 24px;
     right: 35px;
   }
-  display: inline-block;
-  background-color: #f7f7f7;
   border-radius: 4px;
   margin-right: 16px;
+  background-color: #f7f7f7;
+  div {
+    margin-left: 8px;
+  }
+  img {
+    margin-top: -4px;
+  }
 }
 
-.menu:first-child{
+.menu-items:first-child {
   color: #000000;
   background-color: #ffc501;
 }
 
-.menu:last-child{
-    margin-right: 0;
-    padding-right: 28px;
-    padding-left: 16px;
-}
-// В этом месте, что не делаю не могу опустить звезду, поднимается все к ней наоборот 38 строка
-.menu-favorits{
+.menu-items:last-child {
+  margin-right: 0;
+  padding-right: 28px;
+  padding-left: 16px;
   display: flex;
-}
-
-.favorits {
-  margin-left: 8px;
-  margin-top: 10px;
-}
-
-.menu-star{
-
 }
 
 .choice {
@@ -254,9 +250,9 @@
   font-weight: 600;
   color: #ffffff;
 }
-// ВОт тут я не могу сделать так что бы рамка была 
+// ВОт тут я не могу сделать так что бы рамка была
 //за пределами контейнера с дивами instance, она сдвигается внуть а не наружу.
-.selected-video{
+.selected-video {
   background-color: #f7f7f7;
   padding: 8px;
 }
@@ -407,4 +403,3 @@
     color: #999999;
   }
 }
-
