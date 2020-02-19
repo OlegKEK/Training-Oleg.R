@@ -11,14 +11,15 @@
   <body>
     <div class="top-panel">
       <div class="top-panel-left">
-        <img src="/SVG/back-copy.svg" alt="#" class="svg-top-left" />
+        <img src="/SVG/back-copy.svg" alt="#" class="arrow" />
         <p class="daily-activities">Daily activities</p>
       </div>
       <div class="bathing-showering">Bathing & Showering</div>
       <div class="top-panel-right">
-        <img src="/SVG/search.svg" alt="#" />
+        <img src="/SVG/search.svg" alt="#" id="search-img"/>
         <p class="search">Search</p>
-        <img src="/SVG/question-copy.svg" alt="#" />
+        <img src="/SVG/question-copy.svg" alt="#" class="size-img"/>
+        <img src="/SVG/top-copy.svg" alt="#" class="sandwich">
         <p class="font-size">Font Size</p>
         <div class="circle"></div>
       </div>
@@ -29,7 +30,10 @@
         <div class="your-mom">
           Personalized suggestions just for <span>your mom</span>
         </div>
-        <p class="refine">Refine suggestions:</p>
+       <div class="refine">
+        <p class="re-1">Refine suggestions:</p>
+        <p class="re-2">Filters:</p>
+       </div> 
         <ul class="menu">
           <li class="menu-items">Reduce scare and anxiety</li>
           <li class="menu-items">Preparation for bathing</li>
@@ -40,71 +44,91 @@
       <section class="care-tips">
         <div class="choice">
           <p>Try care tips</p>
-          <p>All care tips</p>
+          <p class="all">All care tips</p>
+          <p class="all view">View All</p>
         </div>
         <hr class="hr-all" />
-        <div class="care">
-          <p>
-            Prepare the bath or shower ahead of time. Raise the room
-            temperature, turn on the lights, install the shower stool, prepare
-            towels, fresh gown and toiletries. If the person likes, have some
-            soft music on.
-          </p>
-          <div><img src="/SVG/star.svg" alt="#" /></div>
+        <div class="container-care">
+          <div class="care">
+            <p>
+              Prepare the bath or shower ahead of time. Raise the room
+              temperature, turn on the lights, install the shower stool, prepare
+              towels, fresh gown and toiletries. If the person likes, have some
+              soft music on.
+            </p>
+            <div><img src="/SVG/star.svg" alt="#" /></div>
+          </div>
+          <p id="media-text">Daily Activities: Bathing & Showering</p>
         </div>
         <hr class="hr-all" />
-        <div class="care">
-          <p>
-            If possible, try to match the home bathing or showering routine
-            including time and personal preferences.
-          </p>
-          <div><img src="/SVG/star-copy-5.svg" alt="#" /></div>
+        <div class="container-care">
+          <div class="care">
+            <p>
+              If possible, try to match the home bathing or showering routine including time and personal preferences.
+            </p>
+            <div><img src="/SVG/star-copy-5.svg" alt="#" /></div>
+          </div>
+          <p id="media-text">Behaviors: Believes things that are not true</p>
         </div>
         <hr class="hr-all" />
-        <div class="care">
-          <p style="margin-bottom: 40px;">
-            Cover mirrors with a towel or paper. This will prevent the person
-            from getting scared by their own reflection. Sometimes a person with
-            dementia does not recognize themselves in the mirror and think they
-            are seeing an intruder.
-          </p>
-          <div><img src="/SVG/star.svg" alt="#" /></div>
+        <div class="container-care">
+          <div class="care">
+            <p>
+              Cover mirrors with a towel or paper. This will prevent the person from getting scared by their own reflection.
+              Sometimes a person with dementia does not recognize 
+              themselves in the mirror and think they are seeing <span>an intruder.</span> 
+            </p>
+            <div><img src="/SVG/star.svg" alt="#" /></div>
+          </div>
+          <p id="media-text">Safety: Driving safety</p>
+          <hr class="hr-all hidden" />
         </div>
       </section>
       <section class="video-content">
         <div class="choice">
           <p>Watch videos</p>
-          <p>All videos</p>
+          <p class="all">All videos</p>
+          <p class="all view">View All</p>
         </div>
         <hr class="hr-all" />
         <div class="container-video">
-          <div class="selected-video">
+          <div class="border-video">
             <div class="instance-video">
-              <div
-                class="picture-video"
-                style="background-image: url(/JPG/rectangle-copy.jpg);"
-              >
+              <div class="picture-video active" 
+              style="background-image: url(/JPG/video-1.jpg);background-size: cover;">
                 <div class="star-video">
                   <img src="/SVG/star-copy-4.svg" alt="#" />
                 </div>
-                <div class="time-video"><p>6:12</p></div>
+                <div class="play-video active"><img src="/SVG/play@2x.png" alt="#"></div>
+                <div class="time-video">
+                  <p class="time-video-decstop">6:12</p> 
+                  <p class="time-video-media">3:55</p>
+                </div>
               </div>
               <div class="description-video">
                 <p>
                   Learn what to do when the person refuses to bathe. (4 minutes)
                 </p>
               </div>
+              <p id="media-text">Safety: Driving safety</p>
+              <hr class="hr-all hidden" />
             </div>
           </div>
+          <div class="border-video">
           <div class="instance-video">
             <div
               class="picture-video"
-              style="background-image: url(/JPG/rectangle-copy.jpg);"
+              style="background-image: url(/JPG/video-2.jpg);background-size: cover;"
             >
               <div class="star-video">
-                <img src="/SVG/star-copy-5.svg" alt="#" />
+                <img src="/SVG/star-copy-5.svg" alt="#" class="star-video-decstop"/>
+                <img src="/SVG/star-copy-4.svg" alt="#" class="star-video-media">
               </div>
-              <div class="time-video"><p>11:06</p></div>
+              <div class="play-video"><img src="/SVG/play@2x.png" alt="#"></div>
+              <div class="time-video">
+                <p class="time-video-decstop">11:06</p>
+                <p class="time-video-media">3:55</p>
+              </div>
             </div>
             <div class="description-video">
               <p>
@@ -112,76 +136,91 @@
                 know, try po…
               </p>
             </div>
+            <p id="media-text">Behaviors: Believes things that are not true</p>
+            <hr class="hr-all hidden" />
           </div>
+         </div>
+         <div class="border-video media">
           <div class="instance-video">
             <div
               class="picture-video"
-              style="background-image: url(/JPG/rectangle-copy-2.jpg);"
+              style="background-image: url(/JPG/video-3.jpg);"
             >
               <div class="star-video">
                 <img src="/SVG/star-copy-4.svg" alt="#" />
               </div>
+              <div class="play-video"><img src="/SVG/play@2x.png" alt="#"></div>
               <div class="time-video"><p>1:18</p></div>
             </div>
             <div class="description-video">
               <p>New or worse anxiety.</p>
             </div>
           </div>
+        </div>
+        <div class="border-video media">
           <div class="instance-video">
             <div
               class="picture-video"
-              style="background-image: url(/JPG/rectangle-copy-3.jpg);"
+              style="background-image: url(/JPG/video-4.jpg);"
             >
               <div class="star-video">
                 <img src="/SVG/star-copy-4.svg" alt="#" />
               </div>
+              <div class="play-video"><img src="/SVG/play@2x.png" alt="#"></div>
               <div class="time-video"><p>31:48</p></div>
             </div>
             <div class="description-video">
               <p>A Brief History Of Anesthetics</p>
             </div>
           </div>
+         </div>
         </div>
       </section>
       <section class="podcasts">
         <div class="choice">
           <p>Listen to podcasts</p>
-          <p>All podcasts</p>
+          <p class="all">All podcasts</p>
+          <p class="all view">View All</p>
         </div>
         <hr class="hr-all" />
         <div class="container-audio">
           <div class="title-audio">
             <div class="number-audio">
-              <p>1.</p>
+              <p class="number-audio-decstop">1.</p>
+              <p class="number-audio-media">01.</p>
             </div>
             <div class="text-title-audio">
-              <p>
+              <p class="text-title-audio-decstop">
                 A Brief History Of Anesthetics
               </p>
+              <p class="text-title-audio-media">Read more about 'Older Adults and Depression', and be on the lookout for warning signs. Seek help early.</p>
+              <p id="media-text">Safety: Driving safety</p>
             </div>  
           </div>
           <div class="time-audio">
             <p>12:26</p>
            <img src="/SVG/star.svg" alt="#" />
           </div>
-         </div>
+        </div>
         <hr class="hr-all" />
         <div class="container-audio">
           <div class="title-audio">
             <div class="number-audio">
-              <p >2.</p>
+              <p class="number-audio-decstop">2.</p>
+              <p class="number-audio-media">02.</p>
             </div>
             <div class="text-title-audio">
               <p>
                 24×7 Medications Online Service
               </p>
+              <p id="media-text">Behaviors: Believes things that are not true</p>
             </div>  
           </div>
           <div class="time-audio">
             <p>12:26</p>
            <img src="/SVG/star.svg" alt="#" />
           </div>
-         </div>
+        </div>
         <hr class="hr-all" />
         <div class="selected-audio">
          <div class="container-audio">
@@ -205,40 +244,45 @@
       <section class="useful-links">
         <div class="choice">
           <p>Chesk useful links</p>
-          <p style="visibility: hidden;">hiden</p>
+          <p style="visibility: hidden;" class="all">hiden</p>
+          <p class="all view">View All</p>
         </div>
         <hr class="hr-all" />
         <div class="links">
-          <div>
+          <div class="top-links">
             <p>
               Learn about palliative care. Palliative care can help people with
               a serious illness at any stage.
             </p>
             <img src="/SVG/star.svg" alt="#" />
           </div>
-          <img src="/SVG/leaf.png" alt="#" />
-          <p>http://palliativedoctors.org/palliative/care</p>
+          <div class="bottom-links">
+            <img src="/SVG/leaf.png" alt="#" />
+            <p>http://palliativedoctors.org/palliative/care</p>
+          </div>
+          <p id="media-text">Daily Activities: Bathing & Showering</p>
         </div>
         <hr class="hr-all" />
         <div class="links">
-          <div>
+          <div class="top-links">
             <p>
-              Prepare the bath or shower ahead of time. Raise the room
-              temperature, turn on the lights, install the shower stool, prepare
-              towels, fresh gown and toiletries. If the person likes, have some
-              soft music on.
+              Prepare the bath or shower ahead of time. Raise the room temperature, turn on the lights, install the shower stool, prepare towels, fresh gown and toiletries. If the person likes, have some soft music on.
             </p>
             <img src="/SVG/star.svg" alt="#" />
           </div>
-          <img src="/SVG/leaf.png" alt="#" />
-          <p style="margin-bottom: 56px;">
-            http://palliativedoctors.org/palliative/supercare
-          </p>
+          <div class="bottom-links">
+            <img src="/SVG/leaf.png" alt="#" />
+            <p>http://palliativedoctors.org/palliative/supercare</p>
+          </div>
+          <p id="media-text">Daily Activities: Bathing & Showering</p>
+          <hr class="hr-all hidden" />
         </div>
       </section>
+      <section class="important-documents">
         <div class="choice">
           <p>Read important documents</p>
-          <p>All documents</p>
+          <p class="all">All documents</p>
+          <p class="all view">View All</p>
         </div>
         <hr class="hr-all" />
         <div class="read-important-document">
@@ -250,7 +294,9 @@
             <div class="texts">
               <p class="main-text">What Is Classical Homeopathy</p>
               <p class="time-text">6 min read</p>
+              <p id="media-text">Daily Activities: Bathing & Showering</p>
             </div>
+            
           </div>
     
           <div class="favourite">
@@ -267,6 +313,7 @@
             <div class="texts">
               <p class="main-text">Read more about 'Older Adults and Depression', and be on the lookout for warning signs. Seek help early.</p>
               <p class="time-text">11 min read</p>
+              <p id="media-text">Safety: Driving safety</p>
             </div>
           </div>
     
@@ -282,13 +329,15 @@
             </div>
     
             <div class="texts">
-              <p class="main-text">Learn how to practice the self-compassion break. You can listen to the podcast. Compassion starts with oneself and it can be learned. It will help you feel more compassion for yourself and the person in your care.</p>
+              <p class="main-text decstop">Learn how to practice the self-compassion break. You can listen to the podcast. Compassion starts with oneself and it can be learned. It will help you feel more compassion for yourself and the person in your care.</p>
+              <p class="main-text media">What Is Classical Homeopathy</p>
               <p class="time-text">4 min read</p>
+              <p id="media-text">Daily Activities: Bathing & Showering</p>
             </div>
           </div>
     
           <div class="favourite">
-            <img src="/SVG/star.svg" alt="#">
+            <img src="/SVG/star-copy-5.svg" alt="#">
           </div>
           </div>
         <hr class="hr-all" />
@@ -299,15 +348,18 @@
             </div>
     
             <div class="texts">
-              <p class="main-text">What Is Classical Homeopathy</p>
+              <p class="main-text decstop">What Is Classical Homeopathy</p>
+              <p class="main-text media">Read more about 'Older Adults and Depression', and be on the lookout for warning signs. Seek help early.</p>
               <p class="time-text">6 min read</p>
+              <p id="media-text">Safety: Driving safety</p>
             </div>
           </div>
-    
+          
           <div class="favourite">
             <img src="/SVG/star.svg" alt="#">
           </div>
         </div>
+        <hr class="hr-all hidden" />
       </section>
 		</div>
 		<footer>
